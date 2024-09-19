@@ -24,6 +24,88 @@ img {
 html {
     font-family: "Poppins", sans-serif;
 }
+ul li {
+    list-style: none;
+}
 body {
     width: 100%;
+    display: grid;
+    grid-template: repeat(6, 1fr) / 1fr 4fr;
+}
+
+#header {
+    display: grid;
+    grid-template: 1fr 1fr / 1fr;
+    height: 150px;
+    grid-column: 2 / 6;
+    grid-row: 1;
+    padding: 1em 2em;
+}
+
+#header .first-container {
+    grid-column: 1;
+    grid-row: 1;
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: 50px 4fr 50px 100px 100px ;
+    align-items: center;
+    text-align: center;
+}
+
+#header .second-container {
+    grid-column: 1;
+    grid-row: 2;
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: 70px 5fr auto auto auto ;
+    align-items: center;
+    gap: 15px;
+}
+
+.first-container img{
+    width: 25px;
+    height: auto;
+}
+
+.first-container .bar {
+    background: var(--light-blue);
+    width: 80%;
+    border-radius: 15px;
+    color: var(--light-blue);
+}
+
+.first-container .logo img{
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+}
+
+
+.first-container .name {
+    font-weight: 600;
+    font-size: 13px;
+    width: 30ch;
+    line-height: 0px;
+    word-spacing: 5px;
+    text-align: start;
+}
+
+.second-container .logo img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+
+.second-container .admin-greeting p {
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.second-container .btn a {
+    text-decoration: none;
+    color: var(--white);
+    padding: 7% 25px;
+    background: var(--deep-blue);
+    border-radius: 18px;
+    font-weight: 500;
 }
